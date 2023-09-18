@@ -15,11 +15,14 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/angular-socket-app",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "polyfills": [
               "zone.js"
             ],
@@ -100,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

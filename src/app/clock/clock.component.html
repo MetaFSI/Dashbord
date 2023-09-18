@@ -1,0 +1,26 @@
+<!-- src/app/clock/clock.component.html -->
+
+  <div class="flex justify-center items-center ">
+    <ng-container *ngFor="let i of currArr">
+      <p class="text-[30px] text-white font-bold text-ellipsis animate-fade-down animate-once animate-duration-[1500ms] animate-ease-in-out">{{ i }} </p>
+    </ng-container>
+  
+    <p class="text-[25px] text-white font-black flex justify-center items-center m-1"> : </p>
+    <ng-container *ngFor="let i of min">
+      <p class="text-[30px] text-white font-bold text-ellipsis animate-fade-down animate-once animate-duration-[1500ms] animate-ease-in-out"> {{ i}} </p>
+    </ng-container>
+    <ng-container *ngFor="let i of aPs">
+      <p class="ml-2 font-bold text-[30px] animate-fade-down animate-once animate-duration-[1500ms] animate-ease-in-out">{{i}}</p>
+    </ng-container>
+  
+  
+  </div>
+
+
+<div class="clock drop-shadow">
+  <div class="hand second-hand" [style.transform]="'rotate(' + secondHandRotation + 'deg)'"></div>
+  <div class="hand minute-hand" [style.transform]="'rotate(' + minuteHandRotation + 'deg)'"></div>
+  <div class="hand hour-hand" [style.transform]="'rotate(' + hourHandRotation + 'deg)'"></div>
+</div>
+  <!-- src/app/rotating-clock/rotating-clock.component.html -->
+

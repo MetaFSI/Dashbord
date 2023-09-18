@@ -1,0 +1,50 @@
+/* src/app/rotating-clock/rotating-clock.component.css */
+
+*{
+    //
+}
+.clock {
+   
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 7px;
+    transform: rotate(-400deg); /* Rotate the clock face to align the hands correctly */
+  
+    /* Add other clock styling as needed */
+  }
+  
+  .hand {
+    position: absolute;
+    transform-origin: center bottom;
+    transition: transform 0.5s cubic-bezier(0.4, 2.4, 0.55, 0.9);
+    background-color: #333;
+  }
+  
+  .second-hand {
+    width: 2px;
+    height: 50%;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .minute-hand {
+    width: 2px;
+    height: 40%;
+    top: 12%;
+    left: 50%;
+    transform: translateX(50%);
+  }
+  
+  .hour-hand {
+    width: 2px;
+    height: 25%;
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

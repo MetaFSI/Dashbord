@@ -1,0 +1,11 @@
+.weather {
+    background-image: url(../../assets/images/124416-miui-8-rainy-weather-background-minimal-hd.jpg);
+    background-size: cover;
+    background-position: top; // Set background position to top center
+    width: auto;
+    height: auto; // Adjust this as needed
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

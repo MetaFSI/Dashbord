@@ -1,0 +1,39 @@
+
+  
+
+  <div
+  class="h-12  bg-[#d7d7d7] rounded-[10px] m-1 animate-fade-left animate-duration-[3000] animate-ease-in-out"
+  [ngClass]="urg ? 'grid grid-cols-12' : ''"
+>
+  <div
+    *ngIf="urg"
+    class="col-span-2 text-white rounded-br-lg  rounded-bl-lg rounded-tl-lg   bg-red-500 flex justify-center items-center font-bold animate-fade-down animate-once animate-duration-[3000] animate-delay-[10ms] animate-ease-in-out"
+  >
+    <p
+      class="animate-jump-in animate-once animate-duration-[3000] animate-delay-[100ms] animate-ease-in-out"
+    >
+      UR 
+    </p>
+  </div>
+  <div [ngClass]="urg ? 'col-span-10' : ''">
+    <div class="flex-row flex justify-center bg-white drop-shadow-lg" [ngClass]="urg ? 'rounded-tr-lg rounded-br-lg' : 'rounded-lg'">
+      <span class="text-[12px] font-medium  px-2 m-[1px]  mr-1">N - Sectour   </span>
+      <span class="text-[13px] text-[#05de9b] dro font-bold"> {{cp}}</span>
+    </div>
+    <div class="countdown-timer flex justify-center text-black">
+      <div class="" [ngClass]="minutes<5? 'animate-pulse animate-infinite animate-duration-1000 animate-delay-[10ms] animate-ease-in-out':''">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" [attr.stroke]="minutes < 5 ? 'red' : '#481dff'" class="w-7 h-7 mr-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        
+      </div>
+        <span class="mr-1 text-[19px] font-normal">{{ minutes < 10 ? '0' + minutes : minutes }}</span> 
+        <span class="font-medium">:</span>
+        <span class="ml-1 text-[19px] font-black">{{ seconds < 10 ? '0' + seconds : seconds }}</span> 
+        <span class="ml-1 text-[15px] font-black        ">sec</span>
+      </div>
+  </div>
+</div>
+
+
+
